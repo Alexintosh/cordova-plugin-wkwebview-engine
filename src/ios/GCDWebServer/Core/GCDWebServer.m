@@ -547,7 +547,7 @@ static inline NSString* _EncodeBase64(NSString* string) {
   GWS_DCHECK(_source4 == NULL);
 
   NSUInteger port = [_GetOption(_options, GCDWebServerOption_Port, @0) unsignedIntegerValue];
-  BOOL bindToLocalhost = [_GetOption(_options, GCDWebServerOption_BindToLocalhost, @NO) boolValue];
+  BOOL bindToLocalhost = [_GetOption(_options, GCDWebServerOption_BindToLocalhost, @YES) boolValue];
   NSUInteger maxPendingConnections = [_GetOption(_options, GCDWebServerOption_MaxPendingConnections, @16) unsignedIntegerValue];
 
   struct sockaddr_in addr4;
